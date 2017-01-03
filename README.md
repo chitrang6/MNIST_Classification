@@ -22,6 +22,21 @@ This software contains the implementation to download the MNIST dataset, convert
 
 7) predictions.py 
 
+# Descriptions about the above listed components of the Deep Learning software
+
+1. MNIST_Dataprep.py --> This module converts the downloaded MNIST test and train data into the TFrecords which is the supported file format by the tensorflow for the dataset files. The images and labels are conveerted to this binary format and then it is provided as input. This will act as one type of encoding the dataset.
+
+2. inputToMNISTModel.py --> This module provides the input to our Deep Learning model. Here LeNEt is selected as the Deep Learning model for the hand-written image classification. It decodes the TfRecords files both for the testing and training data-set and then it is fed to the LeNet model. In this way we can handle a very large dataset.
+
+3. model_definition.py --> As described above this is very nice moduler design for the software. This file contains the LeNet model definition. Anyone can just change the model parameters directly in this file and they don't have to change the model parameters seprately for training adnd validation.
+
+4. Train_MNIST_Model.py --> This module contains the code for the training of the LeNet model on the MNIST dataset. It uses all the above moduler implementation for the training. It will aslo save the summary of the training process and one can visualize the training process using the tensorboard.
+
+5. Validation_MNIST.py --> Classification accuracy with the Streaming MSE is used here as to measure the model performance. This file contains the implementation for the validating the trainied LeNEt model using the Testing data-set. 
+
+6. predictions_usingModel.py --> This module contains the implementation to predict the digits or to classify the provided input image as one of the 0-9 digits for the unlown images which are not known to Model. 
+
+7. predictions.py --> This file is used for making the prediciotns on the unlown input image. The input is provided as the URL form as the command line argument. This software supports for now only .png or .jpeg images. How to use this Deep Learning software is defined below.
 
 
 
