@@ -47,15 +47,21 @@ The output of the program displays the probability of having the perticular digi
 
 
 The URL is: http://www.fastforwardlabs.com/blog-images/miriam/mnist_%5B6%5D.png
+
 Image is a png
+
 coming here
+
 [[  2.52584718e-19   1.06800495e-22   8.18386664e-16   1.51070594e-33
     3.93154816e-16   1.06397777e-17   1.00000000e+00   5.68210753e-33
     2.67818678e-26   4.87909434e-25]]
+
 6
 
 The probabilities are for the digits 0-9 respectively.
 Where 6 is the digit classified fo the given input image by the trained model.
 
 
-In this software 
+In this software repo, the usage_example.png file contains the screenshot of the abve command executed on the MacOS X and with the result.
+
+Thank you
