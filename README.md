@@ -88,17 +88,17 @@ Execute the above command in the command line. It will start the web-server writ
 
 Steps to run the Web-Client
 
-### 1) Open your browser.
+##### 1) Open your browser.
 
-### 2) Type 127.0.0.1:5000. You will see the home page asking to input the Image URL. Click on that underlined line.
+##### 2) Type 127.0.0.1:5000. You will see the home page asking to input the Image URL. Click on that underlined line.
 
-### 3) Now, the next web-page will open. In that next page, user will be asked to input the image URL. 
+##### 3) Now, the next web-page will open. In that next page, user will be asked to input the image URL. 
 
-### 4) Give the image URL in the 'URL' field and click the Classify Button.
+##### 4) Give the image URL in the 'URL' field and click the Classify Button.
 
-### 5) After clicking the Classify button, The client sent the request to the web-server, the web server will get the image URl and will run the Deep LEarning algorithm to Classify the image.
+##### 5) After clicking the Classify button, The client sent the request to the web-server, the web server will get the image URl and will run the Deep LEarning algorithm to Classify the image.
 
-### 6) The output as a response from the Web-server is displayed as the digit classified by the web-server. It will aslo return the probabilities and the results in the form of JSON blob.
+##### 6) The output as a response from the Web-server is displayed as the digit classified by the web-server. It will aslo return the probabilities and the results in the form of JSON blob.
 
 
 ## Additional Implementation Details:
@@ -114,21 +114,21 @@ Steps to run the Web-Client
 If the user wants to do his own training after changing some of the model hyperparameters, follow the below steps to achieve the same.
 
 
-### 1) First convert the MNIST dataset to the TFrecords for testing and training. For that execute the below command.
+##### 1) First convert the MNIST dataset to the TFrecords for testing and training. For that execute the below command.
 
 ## $ python MNIST_Dataprep.py
 
-### 2) After creating the TFRecords for the training and testing, now the time is to train the model. If user wants to change the model hyperparameters, he/she can look at the model definition in model_definition.py. Now the task is to train the model. Run the following commad to traing the model.
+##### 2) After creating the TFRecords for the training and testing, now the time is to train the model. If user wants to change the model hyperparameters, he/she can look at the model definition in model_definition.py. Now the task is to train the model. Run the following commad to traing the model.
 
 ## $ pythonTrain_MNIST_Model.py
 
 
-### 3) After the training all the model related files and logging files will be saved in the /log/train/ directory. Now, the next step is to validate the model on the Test dataset. For the Model Validation run the following command.
+##### 3) After the training all the model related files and logging files will be saved in the /log/train/ directory. Now, the next step is to validate the model on the Test dataset. For the Model Validation run the following command.
 
 ## $ Validation_MNIST.py
 
 
-### 4) After the validation, the next step is to predict the single input image using the saved model. See the description provided in Version 1.0
+##### 4) After the validation, the next step is to predict the single input image using the saved model. See the description provided in Version 1.0
 
 
 
