@@ -73,7 +73,7 @@ def process():
 		DATA_TO_SEND , probability = MNIST_predictions(inputUrl)
 		#print DATA_TO_SEND
 		FinalResultObj = MNIST_classification(inputUrl , DATA_TO_SEND , probability )
-		json_format =  jsonify(FinalResultObj.toJSON())
+		json_format =  FinalResultObj.toJSON()
 		return render_template('index.html', name=inputUrl , comment = json_format , result = str(DATA_TO_SEND))
 	#comment = request.form['comment']
 	#return 'Name is: ' + name + 'and the comment is:  ' + comment 
