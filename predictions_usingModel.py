@@ -23,6 +23,27 @@ cwd = os.getcwd()
 model_file_path = cwd +  '/log/train/model.ckpt-20000'
 
 
+
+
+# The names of the classes.
+_CLASS_NAMES = [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+]
+
+
+
+
+
+
 print cwd
 print model_file_path
 
@@ -63,17 +84,14 @@ def MNIST_predictions(url):
     isBackgroundBlack = False
     for pixel in im.getdata():
         n = n+ 1
-        #print pixel
         if pixel == 0:
             black+=1
-
-    if (black / float(n)) > 0.5:
+    if (black / float(n)) > 0.4:
         isBackgroundBlack = True
-        print("BackGround is  black:")
+        print("mostly black")
         #inverted_image = PIL.ImageOps.invert(im)
     else:
         inverted_image = ImageOps.invert(im)
-        print("BackGround is  White. Need to inver the image :")
         inverted_image.save('inverted_image.png')
 
 
@@ -122,13 +140,24 @@ def MNIST_predictions(url):
                     init_fn(sess)
                     np_image, probabilities = sess.run([image2, probabilities])
                     #print np_image.shape
-                    print probabilities
-                    probabilities = probabilities[0, 0:]
-                    sorted_inds = [i[0] for i in sorted(enumerate(-probabilities), key=lambda x:x[1])]
+                    #print probabilities
+                    probabilities_sort = probabilities[0, 0:]
+                    probabilities_list = probabilities.tolist()
+                    #print probabilities.shape
+                    #print probabilities
+                    #probabilities_dict = dict(zip(_CLASS_NAMES , probabilities.T))
+                    #probabilities_dict = {}
+                    #for i in range(len(_CLASS_NAMES)):
+                    #    print _CLASS_NAMES[i]
+                    #    probabilities_dict[_CLASS_NAMES[i]] = probabilities[0][i]
+                    #print probabilities_dict
+                    sorted_inds = [i[0] for i in sorted(enumerate(-probabilities_sort), key=lambda x:x[1])]
+                    #print type(sorted_inds[0])
                     print sorted_inds[0]
-            plt.figure()
-            np_image = np.reshape(np_image , 784)
-            np_image = np.reshape(np_image , (28, 28))
-            plt.imshow(np_image.astype(np.uint8))
-            plt.axis('off')
-            plt.show()
+            #plt.figure()
+            #np_image = np.reshape(np_image , 784)
+            #np_image = np.reshape(np_image , (28, 28))
+            #plt.imshow(np_image.astype(np.uint8))
+            #plt.axis('off')
+            #plt.show()
+    return sorted_inds[0] , probabilities_list
