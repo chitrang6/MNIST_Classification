@@ -101,14 +101,37 @@ Steps to run the Web-Client
 ### 6) The output as a response from the Web-server is displayed as the digit classified by the web-server. It will aslo return the probabilities and the results in the form of JSON blob.
 
 
-## Additional Implementation:
+## Additional Implementation Details:
 
 --> This Deep Learning algorithm (classsifier) for the MNIST hand written digit classification can handle both the images of having balck and also images having white background.
+--> Also the implementation is such that this training and validation can handle very large dataset.
 
 
 
-Thank you
+## Your Own Training 
+
+
+If the user wants to do his own training after changing some of the model hyperparameters, follow the below steps to achieve the same.
+
+
+### 1) First convert the MNIST dataset to the TFrecords for testing and training. For that execute the below command.
+
+## $ python MNIST_Dataprep.py
+
+### 2) After creating the TFRecords for the training and testing, now the time is to train the model. If user wants to change the model hyperparameters, he/she can look at the model definition in model_definition.py. Now the task is to train the model. Run the following commad to traing the model.
+
+## $ pythonTrain_MNIST_Model.py
+
+
+### 3) After the training all the model related files and logging files will be saved in the /log/train/ directory. Now, the next step is to validate the model on the Test dataset. For the Model Validation run the following command.
+
+## $ Validation_MNIST.py
+
+
+### 4) After the validation, the next step is to predict the single input image using the saved model. See the description provided in Version 1.0
 
 
 
-Thank you
+Thank you......!!!!!!!
+
+
