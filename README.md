@@ -73,6 +73,41 @@ In this software repo, the usage_example.png file contains the screenshot of the
 
 This version now contains the full implementation of the MNIST classification using the Flask Web Server. The User will run the .html file from the local machine and also run the web server locally created with the Python Flask. Then the user will provide the image URL, he/she wants to classify the digit and the web server will run the Deep Learning classification task and return the digits identified by the Deep Learning algorithm (Classifier). It will show to the web-client the correct classification and also return the probabilities as the JSON blob.
 
+## How to run the Version 2.0?
+
+To run the Version 2.0 of the software, one should first start the web server. The web -server contains the Deep Learinng algorithm to classify the hand-written digits. The web-server calls the prediction API talked in the Version 1.0 of the software.
+
+-- How to run the Web-server (Flask)?
+
+### $ python MNIST_ClassifierServer.py
+
+Execute the above command in the command line. It will start the web-server written in the Python Flask. 
+
+
+-- Now, the next step is to start the Web-client to send the input image request to the Server and get the results from the Web-server as POST request.
+
+Steps to run the Web-Client
+
+### 1) Open your browser.
+
+### 2) Type 127.0.0.1:5000. You will see the home page asking to input the Image URL. Click on that underlined line.
+
+### 3) Now, the next web-page will open. In that next page, user will be asked to input the image URL. 
+
+### 4) Give the image URL in the 'URL' field and click the Classify Button.
+
+### 5) After clicking the Classify button, The client sent the request to the web-server, the web server will get the image URl and will run the Deep LEarning algorithm to Classify the image.
+
+### 6) The output as a response from the Web-server is displayed as the digit classified by the web-server. It will aslo return the probabilities and the results in the form of JSON blob.
+
+
+## Additional Implementation:
+
+--> This Deep Learning algorithm (classsifier) for the MNIST hand written digit classification can handle both the images of having balck and also images having white background.
+
+
+
+Thank you
 
 
 
