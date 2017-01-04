@@ -116,16 +116,16 @@ If the user wants to do his own training after changing some of the model hyperp
 
 ##### 1) First convert the MNIST dataset to the TFrecords for testing and training. For that execute the below command.
 
-## $ python MNIST_Dataprep.py
+### $ python MNIST_Dataprep.py
 
 ##### 2) After creating the TFRecords for the training and testing, now the time is to train the model. If user wants to change the model hyperparameters, he/she can look at the model definition in model_definition.py. Now the task is to train the model. Run the following commad to traing the model.
 
-## $ pythonTrain_MNIST_Model.py
+### $ pythonTrain_MNIST_Model.py
 
 
 ##### 3) After the training all the model related files and logging files will be saved in the /log/train/ directory. Now, the next step is to validate the model on the Test dataset. For the Model Validation run the following command.
 
-## $ Validation_MNIST.py
+### $ Validation_MNIST.py
 
 
 ##### 4) After the validation, the next step is to predict the single input image using the saved model. See the description provided in Version 1.0
