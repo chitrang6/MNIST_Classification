@@ -38,6 +38,9 @@ This software contains the implementation to download the MNIST dataset, convert
 
 7. predictions.py --> This file is used for making the prediciotns on the unlown input image. The input is provided as the URL form as the command line argument. This software supports for now only .png or .jpeg images. How to use this Deep Learning software is defined below.
 
+
+# Version 1.0
+
 ## $ python predictions.py <"image url">
 
 
@@ -63,5 +66,11 @@ Where 6 is the digit classified fo the given input image by the trained model.
 
 
 In this software repo, the usage_example.png file contains the screenshot of the abve command executed on the MacOS X and with the result.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+# Version 2.0
+
+
 
 Thank you
