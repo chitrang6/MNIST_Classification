@@ -71,6 +71,9 @@ In this software repo, the usage_example.png file contains the screenshot of the
 
 # Version 2.0
 
+This version now contains the full implementation of the MNIST classification using the Flask Web Server. The User will run the .html file from the local machine and also run the web server locally created with the Python Flask. Then the user will provide the image URL, he/she wants to classify the digit and the web server will run the Deep Learning classification task and return the digits identified by the Deep Learning algorithm (Classifier). It will show to the web-client the correct classification and also return the probabilities as the JSON blob.
+
+
 
 
 Thank you
