@@ -64,15 +64,16 @@ def MNIST_predictions(url):
     for pixel in im.getdata():
         n = n+ 1
         #print pixel
-        if pixel == (0,255):
+        if pixel == 0:
             black+=1
 
     if (black / float(n)) > 0.5:
         isBackgroundBlack = True
-        print("mostly black")
+        print("BackGround is  black:")
         #inverted_image = PIL.ImageOps.invert(im)
     else:
         inverted_image = ImageOps.invert(im)
+        print("BackGround is  White. Need to inver the image :")
         inverted_image.save('inverted_image.png')
 
 
